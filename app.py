@@ -198,4 +198,5 @@ else:
         st.markdown("### 👤 **My Profile**")
         c.execute("SELECT name, email, username FROM users WHERE id=?", (st.session_state.user_id,))
         u = c.fetchone()
+
         if u: st.info(f"**Name:** {u[0]}\n\n**Email:** {u[1]}\n\n**Username:** {u[2]}")
